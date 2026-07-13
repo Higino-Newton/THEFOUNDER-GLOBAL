@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGBSchool_Segurança</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+</head>
+
+<body>
+    
+        <div class="container py-5">
+
+            <div class="cont_Seguranca container py-5 " id="modalSeguranca">
+
+                <span class="fechar">&times;</span>
+                <div class="painel">
+                    <i class="fa fa-arrow-alt-circle-left fechar"></i>
+                    <div class="min_painel  flex-column d-flex justify-content-center align-items-center ">
+                        <i class="fa fa-lock"></i>
+                        <h1 class="display-1 text-center mb-5 ">Segurança de Acesso</h1>
+
+                        <input type="text" class="form-control p-5 mb-5 " placeholder="Inseri admin nome"
+                            id="adminname">
+                        <input type="password" class="form-control p-5  mb-5 mt-5" placeholder="Inseri admin senha"
+                            id="adminpassword">
+                        <button type="submit" class="btn p-5 mt-5"
+                            onclick="Acessar(window.location.href='SGBSchool_Cadastro.html')">Acessar</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+  
+
+
+    <script src="js/script.js"></script>
+    <script src="/node_modules/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
