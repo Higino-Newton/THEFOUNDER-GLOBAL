@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+
+    <title>SGSchool_Home</title>
+</head>
+
+<body class="corpo">
+    <nav class="navbar  navbar-expand-lg fixed-top z-1">
+        <div class="container">
+            <div class="logo me-md-5 me-lg-5">
+                <h2 class="display-3 fw-bold text-light">S.G.E</h2>
+                <span class=" texto d-flex fs-2 ms-5 mb-3 text-light">'Sistema de Gestão Escolar'</span>
+            </div>
+
+        </div>
+   
+
+        </div>
+    </nav>
+    <nav id="sidebar" class="me-5">
+        <div class="side_content">
+
+            <div class="user">
+                <img src="img/Book Teamwork Education Logo Vector Image Stock Vector - Illustration of business, graduate_ 107201379.jpeg"
+                    class="logoschool" />
+
+                <p class="user_infos">
+                    <span class="item-description fs-1"><strong>S.G.E</strong></span>
+                    <span class="item-description fs-3"> Formar o homem <br> é a nossa missão</span>
+                </p>
+            </div>
+            <ul class="side_items">
+                <div class="row py-4"></div>
+                <h2>Dashboard</h2>
+                <li class="side-item active" onclick="window.location.href='SGBSchool.html'">
+
+                    <a href="SGBSchool.html">
+                        <i class="fa-solid fa-line-chart"></i>
+                        <span class="item-description">Dashboard</span>
+                    </a>
+                </li>
+                <br>
+                <h2>A. Admistrativa</h2>
+                <li class="side-item" onclick="window.location.href='SGBSchool_Professor.html'">
+                    <a href="SGBSchool_Professor.html">
+                        <i class="fa-solid fa-chalkboard-teacher"></i>
+                        <span class="item-description">Professores</span>
+                    </a>
+                </li>
+
+                <li class="side-item" onclick="window.location.href='SGBSchool_Disciplina.html'">
+                    <a href="SGBSchool_Disciplina.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span class="item-description">Disciplinas</span>
+                    </a>
+                </li>
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa fa-newspaper"></i>
+                            <span class="item-description">Documentos</span>
+                        </a>
+                    </li>
+                    <li class="side-item" onclick="window.location.href='SGBSchool_Turma.html'">
+                        <a href="SGBSchool_Turma.html">
+                            <i class="fa fa-people-group"></i>
+                            <span class="item-description">Turmas</span>
+                        </a>
+                    </li>
+        
+                <br>
+                <h2>A. Financeira</h2>
+                    <li class="side-item" onclick="window.location.href='SGBSchool_Financeira.html'">
+                        <a href="SGBSchool_Financeira.html">
+                            <i class="fa fa-cash-register"></i>
+                            <span class="item-description">Pagamentos</span>
+                        </a>
+                    </li>
+
+
+                <br>
+
+                <h2>A. Pedagógica</h2>
+                <li class="side-item" onclick="window.location.href='SGBSchool_Inscricao.html'">
+                    <a href="SGBSchool_Inscricao.html">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span class="item-description">Inscrições</span>
+                    </a>
+                </li>
+                        <li class="side-item" onclick="window.location.href='SGBSchool_Matricula.html'">
+                            <a href="SGBSchool_Matricula.html">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <span class="item-description">Matriculas</span>
+                            </a>
+                        </li>
+        <li class="side-item" onclick="window.location.href='SGBSchool_Lancamentos.html'">
+            <a href="SGBSchool_Lancamentos.html">
+                <i class="fa fa-user"></i>
+                <span class="item-description">L. Notas</span>
+            </a>
+        </li>
+                <li class="side-item" onclick="window.location.href='SGBSchool_SegCadas.html'">
+                    <a href="SGBSchool_SegCadas.html">
+                        <i class="fa fa-user-gear"></i>
+                        <span class="item-description">Cadastro User</span>
+                    </a>
+                </li>
+           
+          
+            </ul>
+            <button id="open_btn">
+                <i class="fa fa-chevron-right fs-4"></i>
+            </button>
+            <div class="row py-5 mt-5"></div>
+            <div class="mode mt-5">
+                <span class="mode-text text item-description">Dark Mode</span>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+    <div class="content container">
+        <h1 class="txt mb-5 mt-5">DASHBOARD</h1>
+        <section>
+            <div class="cont container d-flex ">
+                <div class="card col-md-5">
+                    <div class="col-8">
+                        <img src="img/Students.png" class="img-fluid rounded-start ">
+                    </div>
+                    <div class="col-7">
+                        <div class="line_up">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text">Total Estudentes</h3>
+                            <p class="text">2,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-5">
+                    <div class="col-8">
+                        <img src="img/Teachers.png" class="img-fluid rounded-start ">
+                    </div>
+                    <div class="col-7">
+                        <div class="line_up">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text prof">Total Professores</h3>
+                            <p class="text">10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-5">
+                    <div class="col-8">
+                        <img src="img/Parents.png" class="img-fluid rounded-start ">
+                    </div>
+                    <div class="col-7">
+                        <div class="line_up">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text">Total Turmas</h3>
+                            <p class="text">10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-5">
+                    <div class="col-8">
+                        <img src="img/Students.png" class="img-fluid rounded-start ">
+                    </div>
+                    <div class="col-7">
+                        <div class="line_up">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text">Total Disciplinas</h3>
+                            <p class="text">30</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

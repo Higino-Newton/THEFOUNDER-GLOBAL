@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <title>SGBSchool_Professor</title>
+</head>
+
+<body class="corpo">
+    <nav class="navbar  navbar-expand-lg fixed-top z-1">
+        <div class="container">
+            <div class="logo me-md-5 me-lg-5">
+                <h2 class="display-3 fw-bold text-light">S.G.E</h2>
+                <span class=" texto d-flex fs-2 ms-5 mb-3 text-light">'Sistema de Gestão Escolar'</span>
+            </div>
+
+        </div>
+        
+
+        </div>
+    </nav>
+    <nav id="sidebar" class="me-5">
+        <div class="side_content">
+
+            <div class="user">
+                <img src="img/Book Teamwork Education Logo Vector Image Stock Vector - Illustration of business, graduate_ 107201379.jpeg"
+                    class="logoschool" />
+
+                <p class="user_infos">
+                    <span class="item-description fs-1"><strong>S.G.E</strong></span>
+                    <span class="item-description fs-3"> Formar o homem <br> é a nossa missão</span>
+                </p>
+            </div>
+
+        <ul class="side_items">
+            <div class="row py-4"></div>
+            <h2>Dashboard</h2>
+            <li class="side-item" onclick="window.location.href='SGBSchool.html'">
+        
+                <a href="SGBSchool.html">
+                    <i class="fa-solid fa-line-chart"></i>
+                    <span class="item-description">Dashboard</span>
+                </a>
+            </li>
+            <br>
+            <h2>A. Admistrativa</h2>
+            <li class="side-item active" onclick="window.location.href='SGBSchool_Professor.html'">
+                <a href="SGBSchool_Professor.html">
+                    <i class="fa-solid fa-chalkboard-teacher"></i>
+                    <span class="item-description">Professores</span>
+                </a>
+            </li>
+        
+            <li class="side-item" onclick="window.location.href='SGBSchool_Disciplina.html'">
+                <a href="SGBSchool_Disciplina.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span class="item-description">Disciplinas</span>
+                </a>
+            </li>
+            <li class="side-item">
+                <a href="#">
+                    <i class="fa fa-newspaper"></i>
+                    <span class="item-description">Documentos</span>
+                </a>
+            </li>
+        <li class="side-item" onclick="window.location.href='SGBSchool_Turma.html'">
+            <a href="SGBSchool_Turma.html">
+                <i class="fa fa-people-group"></i>
+                <span class="item-description">Turmas</span>
+            </a>
+        </li>
+            <br>
+            <h2>A. Financeira</h2>
+            <li class="side-item" onclick="window.location.href='SGBSchool_Financeira.html'">
+                <a href="SGBSchool_Financeira.html">
+                    <i class="fa fa-cash-register"></i>
+                    <span class="item-description">Pagamentos</span>
+                </a>
+            </li>
+        
+        
+            <br>
+        
+            <h2>A. Pedagógica</h2>
+            <li class="side-item " onclick="window.location.href='SGBSchool_Inscricao.html'">
+                <a href="SGBSchool_Inscricao.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span class="item-description">Inscrições</span>
+                </a>
+            </li>
+            <li class="side-item" onclick="window.location.href='SGBSchool_Matricula.html'">
+                <a href="SGBSchool_Matricula.html">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span class="item-description">Matriculas</span>
+                </a>
+            </li>
+        <li class="side-item" onclick="window.location.href='SGBSchool_Lancamentos.html'">
+            <a href="SGBSchool_Lancamentos.html">
+                <i class="fa fa-user"></i>
+                <span class="item-description">L. Notas</span>
+            </a>
+        </li>
+        <li class="side-item" onclick="window.location.href='SGBSchool_SegCadas.html'">
+            <a href="SGBSchool_SegCadas.html">
+                <i class="fa fa-user-gear"></i>
+                <span class="item-description">Cadastro</span>
+            </a>
+        </li>
+        
+        
+        </ul>
+            <button id="open_btn">
+                <i class="fa fa-chevron-right fs-4"></i>
+            </button>
+            <div class="row py-5 mt-5"></div>
+            <div class="mode mt-5">
+                <span class="mode-text text item-description">Dark Mode</span>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="cont_prof container">
+        <h2 class="text_prof mb-5 mt-5">Professores</h2>
+    </div>
+    <section>
+        <form method="post" class="needs-validation" novalidate>
+            <div class="campos_prof mb-5">
+                <div class="mb-3 input-group">
+                    <span for="nome" class="input-group-text">Nome Completo</span>
+                    <input type="text" class="form-control " id="nome" placeholder="Primeiro nome" required>
+                    <input type="text" class="form-control" id="nome" placeholder="Sobrenome" required>
+                
+                </div>
+
+                <div class="mb-3 input-group">
+                    <span class="input-group-text p-4">B.I</span>
+                    <input type="text" class="form-control" required>
+                    <span class="input-group-text p-4">Email</span>
+                    <input type="email" class="form-control" required>
+                </div>
+                <div class="mb-3 input-group">
+                    <span class="input-group-text p-4">A. Formação</span>
+                    <input type="text" class="form-control" required>
+                    <span class="input-group-text p-4">Especialidade</span>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div class="mb-3 input-group m-3 gap-5 w-75">
+                    <select name="estado" id="estado" class="p-3 form-select fs-1" required>
+                        <option value="">Selecionar estado</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Passivo">Passivo</option>
+                    </select>
+                    <select name="estado" id="estado" class="p-3 form-select fs-1" required>
+                        <option value="">Selecionar categória</option>
+                        <option value="PRM">Primário</option>
+                        <option value="PCl">Iº Clico</option>
+                        <option value="SCl">IIº Ciclo</option>
+                        <option value="TP">Técnico Profissional</option>
+                    </select>
+
+                </div><br>
+                <div class="mt-5 form-check">
+                    <input type="radio" class="form-check-input" id="masculino" name="sexo" value="Masculino" required>
+                    <label for="masculino" class="form-check-label">Masculino</label>
+                    <input type="radio" class="form-check-input" id="femenino" name="sexo" value="Femenino" required>
+                    <label for="femenino" class="form-check-label">Femenino</label>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text p-4 ">Data Nascimento</span>
+                    <input type="date" class="form-control" required>
+                </div>
+               
+                <div class="mb-3 input-group w-100">
+                    <span class="input-group-text p-4 ">Telefone</span>
+                    <input type="tel" class="form-control" id="tel" pattern="[0-9]{9}" required>
+                    <span class="input-group-text p-4">Morada</span>
+                    <input type="text" class="form-control" id="morada" required>
+                </div>
+                <div class="docs">
+                <div class=" input-group w-50">
+                    <input type="file" id="arquivo" class="form-control" required>    
+                </div>
+                <div class="ver_docs"><a href="#"><button class="btn btn-outline-success fs-1 p-3">Ver Documentos</button></a></div>
+            </div>
+                
+                <div class="btn-group">
+                    <button type="submit" class="btn adicionar p-5 ">Adicionar</button>
+                </div>
+                <div class=" btn_other btn-group">
+                    <button class="btn limpar p-5 btn-outline-warning" onclick="">Limpar</button>
+                    <button class="btn editar p-5 btn-outline-secondary">Editar</button>
+                    <button class="btn remover p-5  btn-outline-danger">Remover</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <div class="tabela_prof">
+        <table class="tb">
+            <thead>
+            <tr>
+                <th scope="col">id_professor</th>
+                <th scope="col" class="nome">Prim_Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">BI</th>
+                <th scope="col" class="email">Email</th>
+                <th scope="col">Data_nascimento</th>
+                <th scope="col">A_Formação</th>
+                <th scope="col">Especialidade</th>
+                <th scope="col" class="estado">Estado</th>
+                <th scope="col">Categória</th>
+                <th scope="col" class="sexo">Sexo</th>
+                <th scope="col" class="tel">Telefone</th>
+                <th scope="col">Morada</th>
+                <th scope="col">Docs</th>
+                <th scope="col">Data_Cadastro</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+          
+        </table>
+    </div>
+
+ 
+
+
+    <script src="js/script.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

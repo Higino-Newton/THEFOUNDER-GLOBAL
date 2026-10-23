@@ -1,0 +1,1540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #e1e1e1;
+  --sidebar-color: #ffffff;
+  --primary-color: #0b0b0bd2;
+  --primary-color-light: #141414;
+  --toggle-color: #d6d5d5;
+  --text-color: #242424;
+  --toggle-top-color: #026a60;
+  --hover-color1: #0db5a4;
+  --hover-color2: #196d65;
+  --shadow-color: rgba(7, 7, 7, 0.444);
+}
+
+.navbar {
+  background: linear-gradient(42deg, #282a36, #008476, #282a36);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 40px;
+}
+
+.logo {
+  float: left;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 300px;
+}
+
+.logo h2 {
+  position: relative;
+  font-size: 65px;
+  left: 35px;
+}
+
+.logo .texto {
+  right: 35px;
+  position: relative;
+}
+
+.logoschool {
+  width: 125px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.corpo {
+
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--body-color);
+}
+
+.corpo.dark {
+  --toggle-top-color: #fbfbfb;
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #fafafa;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #d7d6d6;
+  --hover-color1: #18a798;
+  --hover-color2: #057a6e;
+  --shadow-color: rgba(230, 230, 230, 0.149);
+}
+
+.user_notification {
+  position: relative;
+  right: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_notification .users {
+  display: flex;
+  margin-right: 20px;
+  border: none;
+  background: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_notification .users p {
+  font-weight: 500px;
+  color: #161616;
+  font-size: 4rem;
+  color: #eee;
+}
+
+.user_notification .users i {
+  font-weight: bold;
+  color: #141414;
+  margin-left: 8px;
+  top: -3px;
+  font-size: 5rem;
+  position: relative;
+  color: #eee;
+}
+
+.user_notification .notification {
+  padding: 30px;
+}
+
+.user_notification .notification {
+  border: none;
+  background-color: #06695f;
+  padding: 15px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.user_notification .notification i {
+  font-size: 3rem;
+  color: #eee;
+  margin: 10px;
+}
+
+.user_notification .notification span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e40101d2;
+  padding: 0px 10px;
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  font-size: 2.3rem;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--sidebar-color);
+  border-radius: 0px 18px 18px 0px;
+  position: fixed;
+  transition: all 0.5s;
+  min-width: 82px;
+  z-index: 2;
+  height: 100vh;
+}
+
+.side_content {
+  padding: 12px;
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.user_infos {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+}
+
+.user_infos span:last-child {
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.side_items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+
+}
+.side_items h2{
+  font-size: 2.4rem;
+}
+
+.side-item {
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+
+}
+
+.side-item i {
+  margin: 6px;
+}
+
+.side_items h2 {
+  color: var(--primary-color);
+}
+
+.side-item.active {
+  background: linear-gradient(45deg, #282a36, #008476);
+}
+
+.side-item:hover:not(.active),
+.logout_btn:hover {
+  background: linear-gradient(45deg, var(--hover-color1), var(--hover-color2));
+}
+
+.side-item a,
+.mode {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.side-item.active a {
+  color: #f2f5fb;
+}
+
+.side-item a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  font-size: 45px;
+
+}
+
+/* 
+.logout {
+  border-top: 1px solid var(--primary-color);
+  padding: 12px;
+}
+.logout_btn {
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 8px;
+  text-align: start;
+  cursor: pointer;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+} */
+#open_btn {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  background: var(--toggle-top-color);
+  color: var(--sidebar-color);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.item-description {
+  overflow: hidden;
+  width: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 3rem;
+  transition: 0.5s;
+  opacity: 1;
+  margin-left: 6px;
+
+}
+
+/*Login*/
+.container-img {
+  position: relative;
+
+  box-shadow: 5px 4px 18px 3px rgba(0, 0, 0, 0.25);
+  left: 10px;
+}
+
+.container-img img {
+  width: 1200px;
+  height: 1400px;
+}
+
+
+.campos_login {
+  padding: 70px;
+  height: 1400px;
+  border-radius: 8px;
+  background: linear-gradient(39deg, #008476, #026a60);
+  box-shadow: 5px 4px 18px 3px rgba(0, 0, 0, 0.25);
+  width: 1100px;
+}
+
+.input-group_login {
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-group_login label {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 3.6rem;
+  pointer-events: none;
+  color: #ffffff;
+  transition: .5s;
+}
+
+.input-group_login input {
+  width: 100%;
+  font-size: 3.8rem;
+  color: #fff;
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+}
+
+.input-group_login input:focus~label,
+.input-group_login input:valid~label {
+  top: 4px;
+  background-color: rgb(14, 119, 109);
+ 
+  border-radius: 8px;
+}
+.btn_login{
+  background-color: #fff;
+  color: #026a60;
+  font-size: 3.7rem;
+  transition: .2s ease-in-out;
+}
+.btn_login:hover{
+  background-color: #008476;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.sign_up{
+  font-size: 3.5rem;
+}
+.boas_vindas{
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/*Codigos da PGSegurança de Acesso*/
+
+.painel{
+  background: linear-gradient(24deg, #008476, #02524a);
+  padding: 150px 70px;
+
+}
+.painel .fa-arrow-alt-circle-left{
+  font-size: 8rem;
+  position: relative;
+  top: -55px;
+  cursor: pointer;
+  color: #fff;
+
+}
+.min_painel{
+  background-color: #ffffffe9;
+  padding: 180px 60px;
+  
+}
+.min_painel form{
+  width: 100%;
+}
+.min_painel i{
+  font-size: 18rem;
+position: relative;
+color: #000;
+
+}
+.min_painel {
+    justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+}
+.min_painel input{
+ font-size: 3.7rem;
+}
+.min_painel  button{
+  padding: 70px;
+  width: 50%;
+  font-size: 3.7rem;
+  color: #02524a;
+  border: 2px solid #02524a;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.min_painel form button:hover{
+  background-color: #02524a;
+  color: #fff;
+} 
+
+.cont_Seguranca{
+ margin-top: 140px;
+} 
+/************************************
+Codigos SGBSchool_Cadastro
+*************************************/
+.cont_cadastro {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_cadastro {
+  position: relative;
+  top: 150px;
+
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_cadastro {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_cadastro .input-group {
+  top: 50px;
+  padding: 20px;
+}
+
+.campos_cadastro .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_cadastro .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+.campos_cadastro .form-check {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  right: 200px;
+  position: relative;
+  gap: 70px;
+
+}
+
+.campos_cadastro .form-check input {
+  padding: 20px;
+
+}
+
+.campos_cadastro .form-check label {
+  font-size: 3.5rem;
+  color: #008476;
+  right: 40px;
+  position: relative;
+}
+
+.campos_cadastro .select {
+  width: 340px;
+}
+
+.campos_cadastro .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 140px;
+  width: 350px;
+}
+
+.campos_cadastro .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_cadastro .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 200px;
+
+}
+
+.campos_cadastro .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+.docs_cadast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .docs_cadast .ver_docs a {
+    color: #000;
+  }
+
+  .tabela_cadast {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 300px;
+    margin-top: -20%;
+    font-size: 3.5rem;
+
+
+  }
+
+  .tabela_cadast .tb tr,
+  td {
+    border: 1px solid #000;
+
+  }
+
+  .tabela_cadast .tb {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 30px;
+    width: 4100px;
+  }
+
+  .tabela_inscr .tb th {
+    border: 1px solid #000;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    background: linear-gradient(34deg, #02524a, #057a6e);
+    color: #fff;
+  }
+/***************************************************/
+
+.mode {
+  display: flex;
+  text-align: start;
+  align-items: center;
+
+}
+
+#sidebar .mode .moon-sun {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.mode i {
+  position: absolute;
+}
+
+#sidebar .mode i.sun {
+  opacity: 0;
+}
+
+#sidebar .node {
+  position: relative;
+  background: var(--primary-color-light);
+}
+
+#sidebar .mode .toggle-switch {
+  height: 100%;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch .switch {
+  position: absolute;
+  height: 30px;
+  position: relative;
+  border-radius: 25px;
+  width: 60px;
+  background: var(--toggle-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background: var(--sidebar-color);
+  transition: 0.3s;
+}
+
+.corpo.dark .switch::before {
+  left: 35px;
+}
+
+.content {
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  width: 90%;
+  height: 100vh;
+
+}
+
+.content .cont {
+  gap: 40px;
+}
+
+.txt {
+  font-size: 7rem;
+  color: #008476;
+}
+
+.content .card {
+  height: 250px;
+  width: 65%;
+  border-radius: 20px;
+  right: 280px;
+
+}
+
+.content .text {
+  position: relative;
+  font-size: 55px;
+  color: var(--body-color);
+  left: 280px;
+
+}
+
+.card {
+  top: 250px;
+  background: linear-gradient(42deg, var(--hover-color2), var(--hover-color1));
+  box-shadow: 0px 5px 20px 10px var(--shadow-color);
+}
+
+.card img {
+  width: 230px;
+  padding: 15px;
+  height: 230px;
+}
+
+.card .line_up {
+  height: 90%;
+  position: absolute;
+  width: 6px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-left: 160px;
+  top: -1px;
+  left: 155px;
+}
+
+.card .card-body {
+  top: -200px;
+  left: 45px;
+  position: relative;
+}
+
+/* ======== AQUI VAI A ESTILIZAÇÃO DA PAGINA INSCRIÇÃO ========
+****************************************************************/
+
+.cont_inscr {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_incri {
+  position: relative;
+  top: 150px;
+  right: 240px;
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos .input-group {
+  top: 20px;
+  padding: 20px;
+}
+
+.campos .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+.campos .form-check {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  right: 200px;
+  position: relative;
+  gap: 70px;
+
+}
+
+.campos .form-check input {
+  padding: 20px;
+
+}
+
+.campos .form-check label {
+  font-size: 3.5rem;
+  color: #008476;
+  right: 40px;
+  position: relative;
+}
+
+.campos .select {
+  width: 340px;
+}
+
+.campos .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 40px;
+  width: 350px;
+}
+
+.campos .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 80px;
+
+}
+
+.campos .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+.docs_inscr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.docs_inscr .ver_docs a {
+  color: #000;
+}
+.tabela_inscr {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 300px;
+  margin-top: -20%;
+  font-size: 3.5rem;
+ 
+
+}
+
+.tabela_inscr .tb tr,
+td {
+  border: 1px solid #000;
+
+}
+
+.tabela_inscr .tb {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px;
+  width: 4100px;
+}
+
+.tabela_inscr .tb th {
+  border: 1px solid #000;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  background: linear-gradient(34deg, #02524a, #057a6e);
+  color: #fff;
+}
+
+
+/* ======== AQUI VAI A ESTILIZAÇÃO DA PAGINA TURMA ========
+****************************************************************/
+
+.cont_turm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_turm {
+  position: relative;
+  top: 150px;
+  right: 240px;
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_turm {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_turm .input-group {
+  top: 20px;
+  padding: 20px;
+}
+
+.campos_turm .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_turm .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+
+.campos_turm .select {
+  width: 340px;
+}
+
+.campos_turm .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 40px;
+  width: 350px;
+}
+
+.campos_turm .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_turm .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 80px;
+
+}
+
+.campos_turm .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+
+.tabela_turma {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 400px;
+  margin-top: -20%;
+  font-size: 3.5rem;
+
+}
+
+.tabela_turma .tb tr,
+td {
+  border: 1px solid #000;
+
+}
+
+.tabela_turma .tb {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px;
+  width: 1700px;
+}
+
+.tabela_turma .tb th {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(34deg, #02524a, #057a6e);
+  color: #fff;
+}
+
+/*
+/* ======== AQUI VAI A ESTILIZAÇÃO DA PAGINA PROFESSOR ========
+****************************************************************/
+
+.cont_prof {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_prof {
+  position: relative;
+  top: 150px;
+  right: 200px;
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_prof {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1650px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_prof .input-group {
+  top: 30px;
+  padding: 20px;
+}
+
+.campos_prof .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_prof .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+.campos_prof .form-check {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  right: 200px;
+  position: relative;
+  gap: 70px;
+
+}
+
+.campos_prof .form-check input {
+  padding: 20px;
+
+}
+
+.campos_prof .form-check label {
+  font-size: 3.5rem;
+  color: #008476;
+  right: 40px;
+  position: relative;
+}
+
+.campos_prof .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 170px;
+  width: 350px;
+}
+
+.campos_prof .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_prof .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 210px;
+
+}
+
+.campos_prof .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+.docs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.docs .ver_docs{
+  position: relative;
+  top: 80px;
+}
+.docs .ver_docs a{
+  color: #000;
+}
+
+.tabela_prof{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ position: relative;
+ left: 300px;
+margin-top: -22%;
+font-size: 3.5rem;
+}
+.tabela_prof .tb tr,
+td {
+  border: 1px solid #000;
+ 
+}
+
+.tabela_prof .tb{
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 10px auto;
+  margin-right: 25px;
+  width: 5100px;
+}
+
+.tabela_prof .tb th{
+  border: 1px solid #000;
+  padding: 10px;
+    padding-left: 80px;
+      padding-right: 80px;
+  text-align: center;
+  background: linear-gradient(34deg, #02524a, #057a6e);
+  color: #fff;
+}
+
+/*
+/* ======== AQUI VAI A ESTILIZAÇÃO DA PAGINA LAMÇAMENTO  DE NOTAS ========
+****************************************************************/
+
+.cont_lanc {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_lanc {
+  position: relative;
+  top: 150px;
+
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_lanc {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_lanc .input-group {
+  top: 60px;
+  padding: 20px;
+  left: 40px;
+}
+
+.campos_lanc .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_lanc .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+.campos_lanc .form-check {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  right: 200px;
+  position: relative;
+  gap: 70px;
+
+}
+
+.campos_lanc .form-check input {
+  padding: 20px;
+
+}
+
+.campos_lanc .form-check label {
+  font-size: 3.5rem;
+  color: #008476;
+  right: 40px;
+  position: relative;
+}
+
+.campos_lanc .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 190px;
+  width: 350px;
+}
+
+.campos_lanc .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_lanc .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 250px;
+
+}
+
+.campos_lanc .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+
+
+
+/*
+/*
+/* ======== AQUI VAI A ESTILIZAÇÃO DA PAGINA DISCIPLINA ========
+****************************************************************/
+
+.cont_disc {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_disc {
+  position: relative;
+  top: 150px;
+  right: 200px;
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_disc {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_disc .input-group {
+  top: 60px;
+  padding: 20px;
+}
+
+.campos_disc .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_disc .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+
+.campos_disc .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 450px;
+  width: 350px;
+}
+
+.campos_disc .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_disc .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 550px;
+
+}
+
+.campos_disc .limpar,
+.editar,
+.remover {
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+
+.tabela_disc {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 400px;
+  margin-top: -20%;
+  font-size: 3.5rem;
+
+}
+
+.tabela_disc .tb tr,
+td {
+  border: 1px solid #000;
+
+}
+
+.tabela_disc .tb {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px;
+  width: 1700px;
+}
+
+.tabela_disc .tb th {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(34deg, #02524a, #057a6e);
+  color: #fff;
+}
+
+/*
+
+/*=================================Codigos da PG_Financeira*/
+.cont_pagament {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.text_pagament {
+  position: relative;
+  top: 150px;
+  right: 210px;
+  font-size: 7rem;
+  color: #008476;
+}
+
+.campos_financ {
+  top: 310px;
+  left: 280px;
+  position: relative;
+  width: 1150px;
+  height: 1550px;
+  background-color: #ffffff;
+  margin: 30px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.campos_financ .input-group {
+  top: 60px;
+  padding: 20px;
+}
+
+.campos_financ .input-group input {
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.campos_financ .input-group .input-group-text {
+  font-size: 2.8rem;
+  background-color: #008476;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 30px;
+}
+
+.campos_financ .form-check {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  right: 200px;
+  position: relative;
+  gap: 70px;
+
+}
+
+.campos_financ .form-check input {
+  padding: 20px;
+
+}
+
+.campos_financ .form-check label {
+  font-size: 3.5rem;
+  color: #008476;
+  right: 40px;
+  position: relative;
+}
+
+.campos_financ .select {
+  width: 340px;
+}
+
+.campos_financ .btn-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 180px;
+  width: 350px;
+}
+
+.campos_financ .btn-group .adicionar {
+  background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2));
+  color: #fff;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 390px;
+}
+
+.campos_financ .btn_other {
+  gap: 20rem;
+  display: flex;
+  border-radius: 20px;
+  top: 270px;
+
+}
+
+.campos_financ .limpar,
+.editar,
+.remover {
+  /* background: linear-gradient(180deg, var(--hover-color1), var(--hover-color2)); */
+  /* color: #fff; */
+  border-radius: 8px;
+  font-size: 3.5rem;
+  left: 400px;
+  display: flex;
+
+}
+
+
+/*Responsividade*/
+@media (max-width: 822px) {
+  .elements {
+    position: relative;
+    left: 190px;
+  }
+
+  .elements .input-group {
+    width: 255px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    padding: calc(30px + 5px);
+  }
+
+  .logo span {
+    position: relative;
+    right: 40px;
+  }
+
+}
+
+@media (min-width: 795px) {
+  .elements {
+    position: relative;
+    left: 250px;
+  }
+}
+
+@media (min-width: 1438px) {
+  #sidebar.open-sidebar {
+    min-width: 15%;
+  }
+
+  #sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+  }
+
+  #sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .logo {
+    margin-left: 117px;
+  }
+}
