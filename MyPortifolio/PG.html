@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="PG.css" />
+  <title>NewtonCode | Portfolio</title>
+</head>
+
+<body>
+  <div class="particulas"></div>
+  <nav class="navegacao">
+    <ul class="menu">
+      <li>
+        <a href="#inicio" class="menu-link">Inicio</a>
+      </li>
+      <li>
+        <a href="#sobre" class="menu-link">Sobre</a>
+      </li>
+      <li>
+        <a href="#projectos" class="menu-link">Projectos</a>
+      </li>
+      <li>
+        <a href="#contactos" class="menu-link">Contactos</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="inicio" class="cabecalho">
+    <img src="./img/EDITADA.jpg" alt="Foto de Higino Newton" class="foto-perfil" />
+    <h1>Higino Artes</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
+  </main>
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quod
+        autem suscipit deserunt alias, harum, vero dignissimos dolores aut
+        numquam reiciendis optio ducimus culpa officiis nobis atque, magnam
+        nulla accusantium. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dolorum alias reiciendis eum quia quo, vero voluptatem aperiam
+        porro qui, perferendis modi beatae laborum doloremque odit dolores
+        dolore. Facilis, nemo est.
+      </p>
+    </div>
+  </section>
+
+  <section id="projectos" class="projectos">
+    <h2 class="projectos-titulo">Meus Projectos</h2>
+    <div class="projectos-caixa">
+      <div class="projectos-card">
+        <img src="./img/AGORa.JPG" alt="Projecto 1" class="projectos-imagem" />
+        <div class="caixa-texto-projecto">
+          <h3 class="info-projectos">Sistemas de Gestão Escolares</h3>
+          <p class="paragrafo-projectos">
+            Softwares responsivos, com capacidades excelentes para gerir uma
+            instituição, muitos simples e facies de usar. Deia mais vida e
+            estilo a sua instituição
+          </p>
+        </div>
+      </div>
+
+      <div class="projectos-card">
+        <img src="./img/images (78).jpeg" alt="Projecto 1" class="projectos-imagem" />
+        <div class="caixa-texto-projecto">
+          <!--essa caixa vai serveir para poder dar espaçamento-->
+          <h3 class="info-projectos">Pizzaria Sweet-Hungry</h3>
+          <p class="paragrafo-projectos">
+            Uma pizzaria que oferece as melhores pizzas da capital, feitas com
+            rapidez, eficácia, qualidade e com amor, acompanhadas com
+            sobremesas e muito mais, venha já não perca! De cada délicia
+            dessas pizzas, afogentam a fome simplesmente como o seu cheiro,
+            tudo isso so encotraras na Pizzaria Sweet-Hungry! Quê Delícia!
+          </p>
+        </div>
+      </div>
+      <div class="projectos-card">
+        <img src="./img/nsvc2 copy.JPG" alt="Projecto 1" class="projectos-imagem" />
+        <div class="caixa-texto-projecto">
+          <h3 class="info-projectos">Gráfica NSVC</h3>
+          <p class="paragrafo-projectos">
+            A Gráfica dos teus sonhos, aqui você encontrará todo tipo de
+            serviço gráfico desde os mais simples até aos complexos, tudo
+            feito com rapidez, eficácia, carinho e amor, não perca essa grande
+            oportunidade, faça já a sua encomenda cá na NSVC tudo é barrato!
+          </p>
+        </div>
+      </div>
+
+      <div class="projectos-card">
+        <img src="./img/Higino Artes.png" alt="Projecto 1" class="projectos-imagem" />
+        <div class="caixa-texto-projecto">
+          <h3 class="info-projectos">Tudo é Arte</h3>
+          <p class="paragrafo-projectos">
+            Melhor lugar para artista. Esse é a empresa Higino Artes criada
+            pela The Founder uma das maiores empresa e organização do país,
+            ela desenvolve e cria empresas com diverços serviços
+            especificados. Essa é uma delas criada para apaixonantes de artes,
+            incluido todo tipo de arte, venha campeão para tornar o teu sonho
+            em realidade!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contactos" class="contactos">
+    <h2 class="contactos-titulo">Entre em Contacto</h2>
+    
+    <form class="formulario-contacto" id="formulario" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input placeholder="Nome" class="campo-form" id="nome">
+      </div>
+
+      <div class="grupo-form">
+        <textarea placeholder="Digite sua Mensagem" class="campo-form" rows="4" id="mensagem">
+          </textarea>
+      </div>
+
+      <button type="submit" class="botao-form">Enviar para WhatsApp</button>
+    </form>
+  </section>
+
+  <script>
+    function enviarWhats(event) {
+      event.preventDefault();
+
+      const nome =
+        document.getElementById('nome').value; /*Nome que a pessoa vai digitar*/
+      const mensagem =
+        document.getElementById('mensagem').value; /*A mensagem que sera enviada*/
+      const telefone = '244946049377'
+
+      const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+      const msgFormatada =
+        encodeURIComponent(texto); /*corruz espaços nas mensagens*/
+
+      const url = `https://wa.me/${telefone}?text=${msgFormatada}`; /*Onde vai cair a mensagem, atraves desse link*/
+
+      console.log(url);
+
+      window.open(
+        url,
+        '_blank'
+      ); /*Ao clicar no botão ele vai abrir um navegador com pagina em branca atraves do _blank*/
+    }
+  </script>
+</body>
+
+</html>
