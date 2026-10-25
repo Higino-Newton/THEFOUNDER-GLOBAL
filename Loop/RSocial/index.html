@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <link rel="shortcut icon" href="img/Logo Loop.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <!--Vai faltar um script javaScript aqui, do site Font Awesome/Your Kits--->
+</head>
+
+<body>
+    <nav>
+        <!--Nav menu lateral esquerda-->
+        <div class="nav-left">
+            <img src="img/Logo Loop.png" class="logo">
+            <ul>
+                <li><img src="img/icons8_notification_64px.png"></li>
+                <li><img src="img/icons8_secured_letter_48px.png"></li>
+                <li><img src="img/icons8_tv_show_64px.png"></li>
+            </ul>
+        </div>
+  <!--Nav menu lateral direita-->
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="img//icons8_search_52px.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-usr-icon online" onclick="settingsMenuToggle()">
+                <img src="img/EDITADA.jpg" height="50">
+            </div>
+        </div>
+ <!------------Definições de menu--------------->
+        <div class="settings-menu">
+            <div id="dark-btn" class="">
+                <span></span>
+            </div>
+            <div class="setting-menu-inner">
+                 <div class="user-profile">
+                    <img src="img/EDITADA.jpg">
+                    <div>
+                        <p>Higino NewtonDev</p>
+                        <a href="#">Ver teu perfil</a>
+                    </div>
+                </div>
+                <hr>
+         <div class="user-profile">
+                    <img src="img/comentarios.png">
+                    <div>
+                        <p>Dar um Feedback</p>
+                        <a href="#">Ajudar a improvisar novo design</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="img/icons8_settings_48px.png" class="settings-icon">
+                    <a href="#">Configurações e Privacidade <img src="img/icons8_forward_48px.png" width="30px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="img/icons8_help_60px.png" class="settings-icon">
+                    <a href="#">Ajuda e  Suporte<img src="img/icons8_forward_48px.png" width="30px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="img/icons8_moon_symbol_60px.png" class="settings-icon">
+                    <a href="#">Mostrar e Sensibilidade <img src="img/icons8_forward_48px.png" width="30px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="img/icons8_open_door_100px.png" class="settings-icon">
+                    <a href="#">Terminar Sessão<img src="img/icons8_forward_48px.png" width="30px"></a>
+                </div>
+            </div>
+                </div>
+    </nav>
+
+    <div class="container">
+        <!------------left-sidebar, BordaAzul a esquerda--------------->
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="#"><img src="img/icons8_news_48px.png">Últimas Notícias</a>
+                <a href="#"><img src="img/icons8_team_60px.png">Amigos</a>
+                <a href="#"><img src="img/icons8_user_groups_100px.png">Grupos</a>
+                <a href="#"><img src="img/icons8_small_business_52px.png">MarketPlace</a>
+                <a href="#"><img src="img/icons8_tv_show_48px.png">Assistir</a>
+                <a href="#">Ver Mais</a>
+            </div>
+            <div class="shortcut-links">
+                <p>Teu Atalho</p>
+                <a href="#"><img src="img/desenvolvedor.jpg">Desenvolvedor Web</a>
+                <a href="#"><img src="img/designweb.jpg">Curso de Design Web</a>
+                <a href="#"><img src="img/fullstack.jpg">Desenvolvedor Full Stack</a>
+                <a href="#"><img src="img/webexperients.jpg">Website Experts</a>
+            </div>
+
+        </div>
+        <!------------main-sidebar, Borda principal, nos story, nas postagens--------------->
+        <div class="main-content">
+              <!--Galeria dos storys-->
+            <div class="story-gallery">
+
+                <div class="story story1"> 
+                    <img src="img/icons8_add_60px.png">
+                    <p>Postar Story</p>
+                </div>
+
+                <div class="story story2">
+                    <img src="img/member1.jpg">
+                    <p>Adriana</p>
+
+                </div>
+
+                <div class="story story3">
+                    <img src="img/member2.jpg" height="41">
+                    <p>Rose</p>
+                </div>
+
+                <div class="story story4">
+                    <img src="img/member3.jpg" height="42">
+                    <p>Sénio</p>
+                </div>
+
+                <div class="story story5">
+                    <img src="img/member4.jpg" height="41">
+                    <p>Tchize</p>
+                </div>
+            </div>
+              <!--Div -->
+            <div class="write-post-container">
+                <div class="user-profile">
+
+                    <img src="img/EDITADA.jpg">
+                    <div>
+                        <p>Higino NewtonDev</p>
+                        <small>Público <img src="img/icons8_sort_down_26px.png" class="down"></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="No que estás a pensar?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="img/icons8_video_call_48px.png">Live Video</a>
+                        <a href="#"><img src="img/icons8_camera_48px.png">Foto/Video</a>
+                        <a href="#"><img src="img/icons8_smiling_96px.png">Feling/Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/EDITADA.jpg">
+                        <div>
+                            <p>Higino NewtonDev</p>
+                            <span>Novembro 22 2025, 15:10 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Visite a minha página, <span>www.newtondevcode.com.ao</span> ou acesse o site geral apartir desse link: <a href="#">NewtonDev</a> WhatsaApp: <a href="#">+244 945 049 377</a></p>
+                <img src="img/coding-at-night-stockcake.jpg" height="450" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">120</div>
+                        <div><img src="img/comentarios.png"> 200 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">90</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/perfil5.jpg">
+                        <div>
+                            <p>Angela Reis Voz</p>
+                            <span>Novembro 02 2025, 11:09 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Sexta-Feira Loca, como yha friends!</p>
+                <img src="img/post6.jpg" class="post-img" height="450">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_1.png">40</div>
+                        <div><img src="img/comentarios.png"> 10 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/member2.jpg">
+                        <div>
+                            <p>Rose T. Virgínia</p>
+                            <span>Novembro 07 2025, 1:03 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">NewtonDev! Criando Páginas responsivas, aproveite já e faça a sua encomenda</p>
+                <img src="img/perfil8.jpg" height="450" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">234</div>
+                        <div><img src="img/comentarios.png"> 150 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">70</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/member1.jpg">
+                        <div>
+                            <p>Adriana L. Rose</p>
+                            <span>Outubro 06 2025, 20:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Noite de Lovor! Lovar sem parar</p>
+                <img src="img/perfil7.jpg" height="450" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_1.png">56</div>
+                        <div><img src="img/comentarios.png">28</div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/member4.jpg">
+                        <div>
+                            <p>Tchize G. William</p>
+                            <span>Outubro 31 2025, 16:19 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Sempre trabalhando, para o bem do país! Apoiando sempre os que necessitam...</p>
+                <img src="img/perfil4.jpg" height="400" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_1.png">18</div>
+                        <div><img src="img/comentarios.png">5</div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">6</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/nsvc.jpg">
+                        <div>
+                            <p>NSVC, Comércio Geral e Prestação de Serviços</p>
+                            <span>Novembro 14 2025, 12:11 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Sua Gráfica, sua casa! NSVC aqui você encontrará todo tipo de serviço personalisado, e acom preços baixo. Serviços de qualidade, feitos com rapidez, precisão, amor e eficácia</p>
+                <img src="img/nsvc2 copy.JPG" height="400" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">318</div>
+                        <div><img src="img/comentarios.png">85</div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">96</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="img/member3.jpg">
+                        <div>
+                            <p>Sánio J. Barroso</p>
+                            <span>Outubro 11 2025, 06:13 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Turques personalisadas, faça já a sua encomenda tudo barato! Contacto: 942 257 972</p>
+                <img src="img/perfil3.jpg" height="400" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_1.png">187</div>
+                        <div><img src="img/comentarios.png">51</div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">24</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="img/LOGO NOVO.png">
+                        <div>
+                            <p>C.E.S.I</p>
+                            <span>Outubro 13 2025, 08:12 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">A sua segunda casa, inscreva já o seu menino(a) na melhor escola comunitária do Município de Cacuaco, Complexo Escolar Santo Irineu, estaremos a tua espera... Venha aprender tudo o que desejar!</p>
+                <img src="img/ERINEU LONA HORIZONTAL.JPG" height="400" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">287</div>
+                        <div><img src="img/comentarios.png">50</div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">64</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/perfil5.jpg">
+                        <div>
+                            <p>Angela Reis Voz</p>
+                            <span>Novembro 06 2025, 11:09 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Comunidade Bussiness! Cria suam empresa e ganhe dinheiro facilmente com o apoio da Comunidade Bussiness... Visita a nossa página: <a href="#">Comuidade Bussiness</a></p>
+                <img src="img/comunidadebussines.jpg" height="450" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_1.png">72</div>
+                        <div><img src="img/comentarios.png"> 14 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">23</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/post7.jpg">
+                        <div>
+                            <p>Pizzaria Sweet-Hungry</p>
+                            <span>Novembro 16 2025, 18:49 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">A melhor e única pizzaria que oferece as melhores pizzas da capital, feitas com rapidez, eficácia, qualidade e com amor, acompanhadas com sobremesas e muito mais, venha já não perca! De cada délicia dessas pizzas, afogentam a fome simplesmente como o seu cheiro, tudo isso so encotraras na Pizzaria Sweet-Hungry! Quê Delícia! Visita a nossa página: <a href="#">Pizzaria Sweet-Hungry</a></p>
+                <img src="img/images (78).jpeg" height="400" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">172</div>
+                        <div><img src="img/comentarios.png">34 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">53</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/franck.jpg">
+                        <div>
+                            <p>Novidades</p>
+                            <span>Novembro 06 2025, 08:19 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Melhor motivadora e enfluenciadora digital "Luana Carolina", Assunto: "Desenvolvimento Pessoal e Profissional" Visita a minha página: <a href="#">Luana Carolina</a></p>
+                <video controls controlsList="nodownloand">
+                    <source src="video/O porquê você deveria estudar todos os dias(360P).mp4" type="video/mp4">
+                </video>
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">172</div>
+                        <div><img src="img/comentarios.png">34 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">53</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+
+                        <img src="img/franck.jpg">
+                        <div>
+                            <p>Novidades</p>
+                            <span>Novembro 06 2025, 08:19 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><img src="img/icons8_menu_vertical_50px.png" height="20"></a>
+                </div>
+                
+                <p class="post-text">Transformando sonhos em realidade, para todo mundo! Visite a página:<a href="#">7Minutoz</a></p>
+                <video controls controlsList="nodownloand">
+                    <source src="video/7 Minutoz_ A Turnê _ Trailer Oficial(360P).mp4" type="video/mp4">
+                </video>
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="img/icons8_facebook_like_100px_2.png">172</div>
+                        <div><img src="img/comentarios.png">34 </div>
+                        <div><img src="img/icons8_forward_arrow_48px_1.png">53</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="img/EDITADA.jpg" height="20" ><img src="img/icons8_sort_down_26px.png" height="15">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="load-more-btn">Load More</button>
+
+       </div>
+    <!------------right-sidebar, BordAzul a direita--------------->
+    <div class="right-sidebar">
+
+        <div class="sidebar-title">
+            <h4>Eventos</h4>
+            <a href="#">Ver Tudo</a>
+        </div>
+
+        <div class="event">
+            <div class="left-event">
+                <h3>18</h3>
+                <span>Novembro</span>
+            </div>
+            <div class="right-event">
+                <h4>Mídia Social</h4>
+                <!--Ao invés de uma tag img, vai vir uma tag <i> com  uma classe do mesmo site, mas para um icon de localização-->
+                <p><img src="img/icons8_place_marker_100px.png" width="12">Higino NewtonDev</p>
+                <a href="#">Mais Informação</a>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="left-event">
+                <h3>30</h3>
+                <span>Novembro</span>
+            </div>
+            <div class="right-event">
+                <h4>Publicidade Móvel</h4>
+                <p><!--<i class="fa-solid fa-location-dot"></i>--><img src="img/icons8_place_marker_100px.png"
+                        width="12">Higino NewtonDev</p>
+                <a href="#">Mais Informação</a>
+            </div>
+        </div>
+
+        <div class="sidebar-title">
+            <h4>Anúncio</h4>
+            <a href="#">Fechar</a>
+        </div>
+        <img src="img/business-meeting-in-modern-conference-room-QPQSEZT-scaled.jpg" class="sidebar-ads">
+
+        <div class="sidebar-title">
+            <h4>Conversas</h4>
+            <a href="#">Mostrar chat</a>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="img/member1.jpg">
+            </div>
+            <p>Adriana Lopes Rose</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="img/member2.jpg" height="40">
+            </div>
+            <p>Rose Tatiana Virgínia</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="img/member3.jpg" height="40">
+            </div>
+            <p>Sánio Jorge Barroso</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="img/member4.jpg" height="40">
+            </div>
+            <p>Tchize Garcias William</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="img/member5.jpg">
+            </div>
+            <p>Wilson Vanguarde Fernando</p>
+        </div>
+
+    </div>
+    </div>
+    <div class="footer">
+        <p>Copyright 2025 - Loop Social</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+header {
+  height: 180px;
+  padding: 20px 0;
+}
+.logo {
+  width: 50%;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+.menu ul li {
+  padding: 10px 10px;
+  position: relative;
+}
+.menu ul li a {
+  color: #6e6e6e;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.menu ul li a:hover {
+  background-color: #3aa472;
+  border-radius: 8px;
+  padding: 6px;
+  color: #fff;
+}
+section.sobre {
+  height: calc(100% - 200px);
+  position: relative;
+}
+.extras {
+  position: absolute;
+  bottom: -510px;
+  right: -380px;
+  width: 1150px;
+  height: 1150px;
+  border-radius: 50%;
+  background-color: #3aa472;
+}
+.extras img {
+  animation: flutuar 2.5s ease-in-out infinite;
+  box-shadow: 0 14px 9px rgba(86, 189, 46, 0.185);
+  border-radius: 50%;
+}
+@keyframes flutuar {
+  /*animação para flutuar o logo */
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+.social-midia {
+  position: absolute;
+  right: 15px;
+  top: 120px;
+}
+.social-midia img {
+  display: block;
+  width: 45px;
+  margin: 25px 0;
+}
+.social-midia img:hover {
+  background-color: #fff;
+  border-radius: 50%;
+}
+.texto-sobre {
+  margin-top: 100px;
+}
+.texto-sobre h1 {
+  font-size: 40px;
+}
+.texto-sobre p {
+  margin: 25px 0;
+  color: #000;
+  text-align: justify;
+  font-size: 21px;
+  max-width: 628px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}
+.texto-sobre p:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(59, 146, 25, 0.2);
+}
+.border-btn {
+  position: absolute;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #258055;
+  border: 1px solid #aaaaaa;
+  z-index: 1;
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.border-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #258055;
+  transition: all 0.8s;
+  z-index: -1;
+}
+.border-btn:hover {
+  color: #fff;
+}
+.border-btn:hover::before {
+  width: 100%;
+}
