@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NSVC - Comércio Geral
+</title>
+<link rel="stylesheet" href="css/home.css">
+<link rel="shortcut icon" href="images/nnsvc.jpg" type="image/x-icon">
+
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top"><img src="images/nnsvc.jpg" alt="NSVC"> NSVC - Comércio Geral</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contacto</a></li>
+      </ul>
+      <button class="menu">&#9776</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="aside" aria-label="Apresentação">
+    <div class="aside-left" role="region" aria-labelledby="hero-title">
+      <div class="catalogo">Catálogo</div>
+      <h1 id="hero-title">NSVC</h1>
+      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nostrum quod praesentium atque corporis ipsum in dolores ipsam vero quia aspernatur alias exercitationem distinctio harum inventore, voluptates consequatur asperiores? Totam! </p>
+      <div class="hero-actions">
+        <button class="btn primary" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver Produtos</button>
+        <button class="btn ghost" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Contactar</button>
+      </div>
+    </div>
+
+    <aside class="aside-right" aria-hidden="true">
+      <div class="drinkup-img">NSVC</div>
+      <div style="text-align:center;color:var(--muted)">Prestação de Serviços Gráficos para transformar sua marca em identidade global .</div>
+    </aside>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="section" aria-label="Produtos">
+    <h2>Produtos & Categórias</h2>
+    <p style="color: gray;">Filtre os produtos abaixo: &#x1F447;</p>
+    <div class="controls">
+      <select id="filter" aria-label="Filtrar categoria">
+        <option value="all">Todos</option>
+        <option value="quadros">Quadros Digitais</option>
+        <option value="pvc">Quadros PVCs</option>
+        <option value="fita">Fitas</option>
+        <option value="apoios">Apoios</option>
+        <option value="laminacao">Laminação</option>
+        <option value="revelacao">Revelação</option>
+        <option value="timbragem_dtf">Timbragem DTF</option>
+        <option value="timbragem_sub">Timbragem Sub.</option>
+        <option value="timbragem_serig">Timbragem Serig.</option>
+        <option value="outros">Outros Materias</option>
+        <option value="bases">Bases</option>
+        <option value="recorte">Recorte</option>
+        <option value="design">All Designs</option>
+      </select>
+    </div>
+    <br>
+    <br>
+
+    <div class="grid" id="grid" aria-live="polite">
+      <!-- produtos inseridos por javascript -->
+    </div>
+  </section>
+
+  
+
+  <!-- Sobre nós e Contacto -->
+  <section id="sobre" class="section">
+    <h2>Sobre</h2>
+    <div class="split">
+      <div class="panel">
+        <h3>NSVC</h3>
+        <p style="color:var(--muted)">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, asperiores odit! Quae, facere! Et aspernatur, voluptatibus fugit odio incidunt nihil at error, excepturi dicta architecto animi ipsam dignissimos facilis? Doloribus.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam dolorem a commodi ut iure, temporibus neque hic in, amet assumenda, quidem quod quaerat libero harum architecto quas asperiores fugit. Possimus.</p>
+        <ul style="color:var(--muted);margin-left:18px">
+          <li>Fotografia de produto</li>
+          <li>Design de rótulos</li>
+          <li>Criação de materiais para ponto de venda</li>
+        </ul>
+      </div>
+
+      <aside id="contato" class="panel">
+        <h3>Contacto</h3>
+        <p style="color:var(--muted)">Telefone: <a href="tel:+2449P46049377" style="color:var(--primary)">+244 946 049 377</a></p>
+        <p style="color:var(--muted)">Email: <a href="mailto:@nsvccomercio.ao" style="color:var(--primary)">@nsvccomercio.ao</a></p>
+        <p style="color:var(--muted)">Endereço: Luanda-Cacuaco, Angola</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Formulario ou Forma para contactar -->
+  <section class="section" style="margin-top:18px">
+    <h2>Enviar Mensagem</h2>
+    <div class="panel contact-form">
+      <form id="contactForm">
+        <label>Nome</label><br>
+        <input id="cname" required placeholder="Seu nome"><br><br>
+
+        <label>Email</label><br>
+        <input id="cemail" type="email" required placeholder="seu@email.com"><br><br>
+
+        <label>Mensagem</label><br>
+        <textarea id="cmessage" rows="5" required placeholder="Escreva a sua mensagem..."></textarea><br>
+
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 NSVC - Comércio Geral e Prestações de Serviços</footer>
+
+<script src="js/scriptarmazenamento.js">
+</script>
+
+
+</body>
+</html>
