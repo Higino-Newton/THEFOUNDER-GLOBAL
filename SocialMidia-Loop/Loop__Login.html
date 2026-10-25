@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loop Login</title>
+  <link rel="stylesheet" href="css/style_nav.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="loop">
+      <div class="center">
+        <div class="logo">Loop</div>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding: 90px 14px">
+    <div style="
+          max-width: 450px;
+          margin: 60px auto;
+          background: var(--card-bg);
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: var(--shadow);
+          height: 100%;
+        ">
+      <form action="" method="" class="needs-validation" novalidate>
+        <div style="text-align: center; margin-bottom: 10px">
+          <img src="img/LoopLogo.png" alt="Loop" style="width: 120px"/>
+        </div>
+        <h3 class="display-6 fw-bold mb-5">Entrar na Loop</h3>
+        <input type="text" id="user" class="form-control p-3 fs-4" placeholder="Usuário ou email" required />
+        <div class="invalid-feedback fs-5">
+          Você deve preencher esse campo
+        </div>
+        <div class="valid-feedback fs-5">
+          Campo preenchido correctamente
+        </div>
+        <div class="row py-3"></div>
+        <input type="password" id="pass" placeholder="Senha" class="form-control p-3 fs-4" required />
+        <div style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+          ">
+          <a href="Loop__Cadastro.html" class="fs-3">Criar conta</a>
+          <button class="btn btn-warning p-4 fs-4 w-50" window.location='Loop__Feed.html'"
+          >
+            Entrar
+          </button>
+        </div>
+        </form>
+      </div>
+      </main>
+      <script>
+        (() => {
+          'use strict'
+          const forms = document.querySelectorAll('.needs-validation')
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Loop Feed</title>
+    <link rel="manifest" href="js/manifest.json" />
+    <link rel="stylesheet" href="css/style_nav.css" />
+    <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon">
+  </head>
+  <body>
+    <style>
+      /* Menu lateral inferior */
+.side-menu{
+  position:fixed;
+  bottom:60px;
+  right:405px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  display:none;
+  padding:10px;
+}
+
+.side-menu div{
+  padding:8px 15px;
+  cursor:pointer;
+}
+
+.side-menu div:hover{
+  background:#eee;
+}
+
+/* Ativar o Modo Dark */
+.dark{
+  --bg:#121212;
+  --card:#1e1e1e;
+  --text:#f7f7f7;
+}
+    </style>
+    <!-- Barra no Top (Tamanho preenchido) -->
+    <div class="topbar">
+      <div class="loop">
+        <div class="left">
+          <img
+            class="avatar"
+            src="img/Avatar.jpg"
+            alt="avatar"
+            onclick="window.location='Loop__Perfi.html'"
+          />
+        </div>
+        <div class="center"><div class="logo">Loop</div></div>
+        <div class="right">
+          <div
+            class="icon"
+            title="Mensagens"
+            onclick="window.location='Loop__Mensagen.html'"
+          >
+            💬
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="feed" id="posts">
+        <!-- Os posts viram aqui-->
+      </section>
+
+      <aside class="sidebar">
+        <div class="profile-card">
+          <img src="img/Avatar.jpg" alt="perfil" />
+          <div>
+            <div class="name">Higino Artes</div>
+            <div style="color: var(--muted); font-size: 13px">Luanda, AO</div>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <strong>Sugestões</strong>
+          <p style="color: var(--muted); margin-top: 8px">
+            Vê oportunidades locais e muito mais.
+          </p>
+        </div>
+
+        <div
+          style="
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          "
+        >
+          <button
+            class="follow-btn"
+            onclick="window.location='Loop__Criar.html'"
+          >
+            Criar Post
+          </button>
+          <button
+            class="follow-btn"
+            onclick="window.location='Loop__Perfi.html'"
+          >
+            Ver Perfil
+          </button>
+          <button
+            class="follow-btn"
+            onclick="window.location='Loop__Kids.html'"
+          >
+            Loop Kids
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <!-- bottom nav, class dos botões de navegação -->
+    <nav class="bottom-nav">
+      <div class="bottom-inner">
+        <div class="bicon" onclick="window.location='Loop__Notificações.html'">
+          🔔
+        </div>
+        <div class="home" onclick="window.location='Loop__Feed.html'">🏠</div>
+
+        <div class="bicon" id="menuBtn">☰</div>
+      </div>
+              <div class="side-menu" id="sideMenu">
+  <div onclick="window.location='Loop__Perfi.html'" >Perfil</div>
+  <div id="darkToggle">Modo Escuro</div>
+  <div>Configurações</div>
+  <div>Terminar Sessão</div>
+</div>
+    </nav>
+
+    <script src="js/script.js"></script>
+    <script>
+      // MENU CHANDUICHI
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+
+menuBtn.onclick = ()=>{
+  sideMenu.style.display = sideMenu.style.display === "block" ? "none" : "block";
+};
+
+// DARK MODE
+document.getElementById("darkToggle").onclick = ()=>{
+  document.body.classList.toggle("dark");
+};
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+
+{
+    "name": "Loop - Rede Social",
+    "short_name": "Loop",
+    "start_url": "Loop__Loading.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#d62976",
+    "icons": [
+      { "src": "img/LoopLogo.png", "sizes": "192x192", "type": "image/jpg" },
+      { "src": "img/LoopLogo.png", "sizes": "512x512", "type": "image/jpg" }
+    ]
+  }

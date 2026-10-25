@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon">
+    <title>Loop Loading</title>
+  </head>
+  <!--Por ser apenas uma pagina simples de carregameto houve a necessidade de estiliza-lá aqui mesmo usando a tag style-->
+  <style>
+    /*Variaveis*/
+    :root {
+      --size: 106px;
+      --dot-size: 18px;
+      --bg: #fff;
+      --spin-duration: 2s;
+      --pulse-duration: 0.7s;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(
+        42deg,
+        rgba(240, 240, 240, 0.623),
+        rgba(168, 168, 168, 0.562)
+      );
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #202020;
+      font-size: 20px;
+    }
+    .spinner {
+      position: relative;
+      width: var(--size);
+      height: var(--size);
+      animation: spin var(--spin-duration) linear infinite;
+      margin: 0 auto;
+    }
+    .dot {
+      position: absolute;
+      width: var(--dot-size);
+      height: var(--dot-size);
+      border-radius: 50%;
+      background-image: linear-gradient(
+        12deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #9b2282
+      );
+      opacity: 0.3;
+      animation: pulse var(--pulse-duration) ease-in-out infinite;
+    }
+    .dot:nth-child(1) {
+      top: 0;
+      left: 0%;
+      transform: translate(-50%, 0);
+      animation-delay: 0s;
+    }
+    .dot:nth-child(2) {
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      animation-delay: 0.1s;
+    }
+    .dot:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      animation-delay: 0.2s;
+    }
+    .dot:nth-child(4) {
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      animation-delay: 0.3s;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scale(1);
+        padding: 5px;
+      }
+      50% {
+        opacity: 1;
+        transform: scale(0.9);
+        padding: 2px;
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #3b3b3b;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <!-- <h1>Bem-vindo ao Loop Social
+    </h1>-->
+      <div class="spinner">
+        <!--dot class para os pontos de carregamento-->
+        <div class="dot">
+          <div class="dot">
+            <div class="dot">
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Carregando, aguarde...</p>
+    </div>
+<!--Tag script para dar mais interatividade, no loading ou processameto usando um elemento do javascript o (setTimeout tem uma duração de 6s)-->
+    <script>
+      const tempoDeCarregamento = 6000;
+      setTimeout(() => {
+        window.location.href = "Loop__Login.html";
+      }, tempoDeCarregamento);
+    </script>
+  </body>
+</html>

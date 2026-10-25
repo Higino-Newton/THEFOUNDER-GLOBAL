@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Criar_Posts</title>
+      <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style_nav.css">
+    <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon">
+</head>
+<body>
+  <!--Iniciando a parte de cima com uma class topbar-->
+    <div class="topbar">
+        <div class="loop">
+          <div class="left"><img class="avatar" src="img/Avatar.jpg" alt="avatar" onclick="window.location='Loop__Perfi.html'"></div>
+          <div class="center"><div class="logo">Loop</div></div>
+          <div class="right"><div class="icon" title="Mensagens" onclick="window.location='Loop__Mensagen.html'">✉️</div></div>
+        </div>
+      </div>
+    <!--Fim da class-->
+    <!--Inicio do main, onde vai albergar todos os componetes da pagina Loop__Ciar, incluido o card que tem todos os outros elementos, como os inputs para a inserção de dados ou informações, buttons, label-->
+      <main style="padding:18px">
+        <div class="create-card" style="max-width:720px;margin:18px auto;background:var(--card-bg);padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+          <h3>Criar Nova Publicação</h3>
+
+          <label>Username</label>
+          <input type="text" id="author" placeholder="Ex: R-Ângelo Official" value="" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+    
+          <label style="margin-top:10px">Descrição</label>
+          <textarea id="desc" rows="4" placeholder="Escreve algo sobre a publicação..." style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px"></textarea>
+    
+          <label style="margin-top:10px">Imagem (indica o caminho ex: img/minha.jpg)</label>
+          <input type="text" id="media" placeholder="Ex: img/minha_imagem.jpg(png)" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+    
+          <label style="margin-top:10px">Usa 'kids' para posts ínfantis</label>
+          <input type="text" id="tags" placeholder="Ex: kids,education" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+    <!--Crio-se mais uma div que carregar elementos como buttons, que por sua vez têm duas finalidades, uma para cancelar a publicação e outra para publicar-->
+          <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:12px">
+            <button class="follow-btn" onclick="window.location='Loop__Feed.html'">Cancelar</button>
+            <button class="follow-btn" id="createBtn" style="background:linear-gradient(90deg,#feda75,#d62976);color:white;border:none">Publicar</button>
+          </div>
+          <!--Finalizou-se a div dos botões aqui -->
+        </div>
+        <!--E tbm finalizou-se a div geral que alberga outros elementos-->
+      </main>
+      <!--E por último o elemnto principal o main que carrega todos eles-->
+      <!--Fez-se a conexão com o arquivo script.js-->
+      <script src="js/script.js"></script>
+      <!--Mas ainda houve a necessidade de configurar a pagina usando outra tag script, pôs não se podia fazer no script geral porque varias e outras paginas também estão ligadas a ele.-->
+      <script>
+        document.getElementById("createBtn").addEventListener("click", ()=>{
+          const author = document.getElementById("author").value.trim() || "Usuário";
+          const desc = document.getElementById("desc").value.trim();
+          const media = document.getElementById("media").value.trim() || "img/Avatar.jpg";
+          const tags = document.getElementById("tags").value.split(",").map(t=>t.trim()).filter(Boolean);
+          createPost(author, media, desc, tags);
+          alert("Publicação criada!");
+          window.location = "Loop__Feed.html";
+        });
+      </script>
+    
+</body>
+</html>

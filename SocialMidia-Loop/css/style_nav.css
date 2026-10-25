@@ -1,0 +1,388 @@
+/*Variaves de cores */
+:root{
+  --grad-start: #feda75;
+  --grad-mid: #fa7e1e;
+  --grad-end: #d62976;
+  --grad-purple: #9b2282;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --muted: #8a8a8a;
+  --primary: #222;
+  --shadow: 0 8px 28px rgba(20,20,20,0.07);
+  --rounded: 12px;
+  --transition: 220ms;
+  --topbar-height: 72px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+}
+html,body{
+  height:100%;
+}
+body{
+  background:var(--bg);
+  color:var(--primary);
+  -webkit-font-smoothing:antialiased;
+  padding-top:var(--topbar-height);
+  min-height:100vh
+}
+
+/* 
+   topbar (100% width e fixed)
+*/
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:var(--topbar-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  background: linear-gradient(90deg, #feda75 0%, #fa7e1e 30%, #d62976 60%, #9b2282 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.178);
+}
+
+
+.topbar .loop{
+  width:100%;
+  max-width:1100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 14px;
+  gap:12px;
+}
+
+.topbar .left, .topbar .center, .topbar .right {
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+
+.topbar .left img.avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,0.15);
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  cursor:pointer
+}
+
+/* Estilização do logo */
+.topbar .logo{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:800;
+  font-size:40px;
+  color:#fff;
+  letter-spacing:0.6px;
+  display:inline-block;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Selector da Class do icon de Messagem */
+.topbar .icon{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.topbar .icon svg{
+  width:20px;
+  height:20px;
+  fill:#fff
+}
+
+
+.container{
+  max-width:1100px;
+  margin:20px auto;
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  padding:0 14px
+}
+
+/* Colunas do Feed  */
+.feed{
+  flex:1;
+  min-width:320px
+}
+
+/* Sidebar */
+.sidebar{
+  width:300px;
+  min-width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:12px
+}
+.profile-card{
+  background:var(--card-bg);
+  padding:12px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.profile-card img{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* Card de Post */
+.post{
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  padding:12px;
+  margin-bottom:18px;
+  position:relative;
+  overflow:hidden;
+  transition:transform var(--transition), box-shadow var(--transition)
+}
+.post:hover{
+  transform:translateY(-6px)
+}
+/*Post-Controls, esta class carrega o icon X e o menu eclipse (...)*/
+.post .post-controls{
+  position:absolute;
+  right:12px;
+  top:0px;
+  display:flex;
+  gap:8px;
+  cursor: pointer;
+  
+}
+.post-menu{
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.post-menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.post-menu ul li{
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.post-menu ul li:hover{
+  background: rgba(0, 0, 0, 05);
+} 
+.post .small{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background:rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+/* media, vai carregar imagens e videos */
+.post .media{
+  width:100%;
+  height:420px;
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:8px;
+  background:#eee;
+}
+.post .media img, .post .media video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.4s;
+}
+.post .media img:hover{
+  transform:scale(1.02);
+}
+
+.post .meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:10px;
+}
+.post .author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.post .author img{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #fff;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+.post .author .name{
+  font-weight:700;
+}
+.post .author .date{
+  font-size:13px;color:var(--muted);
+}
+
+/* follow, classe do botão para seguir */
+.follow-btn{
+  background:transparent;
+  border:1px solid #e6e6e6;
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all var(--transition);
+}
+.follow-btn:hover{
+  background:#fafafa;
+}
+
+/* description, a class que carrega as informaçoes do post abaixo, ou o conteúdo da postagem */
+.post .desc{
+  margin-top:10px;
+  color:#222;
+  line-height:1.45;
+}
+
+/* actions, essa class carrega todos os componentes que o usuario vai clicar, como os botões, de comentar, like ect.*/
+.post .actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:12px;
+}
+.action-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px;
+  border-radius:10px;
+  background:linear-gradient(180deg,#fff,#fbfbfb);
+  border:1px solid #f0f0f0;
+  cursor:pointer;
+  transition:all var(--transition);
+}
+.action-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* bottom nav (fixado no centro) essa classe é carrega os elementos ou botões de navegação que estão fixados no centro das paginas */
+.bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:18px;
+  display:flex;
+  justify-content:center;
+}
+.bottom-inner{
+  max-width:420px;
+  background:rgb(235, 235, 235);
+  padding:10px 18px;
+  border-radius:30px;
+  box-shadow:var(--shadow);
+  display:flex;
+  gap:22px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.bicon{
+  width:603px;
+  height:48px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.menu-slide{
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 1px rgba(0, 0, 0,12);
+}
+.menu-slide ul{
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.menu-slide ul li{
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.post-menu ul li:hover{
+  background: rgba(0, 0, 0,0.459);
+
+}
+.home{
+  background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:12px;
+  font-weight:800}
+
+.centered{
+  max-width:980px;
+  margin:0 auto;
+}
+.kids-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px}
+
+/* Tornar a rede responsiva, para se adaptar em diferentes tamanho de tela */
+@media(max-width:980px){
+  .container{
+    flex-direction:column;
+    padding:0 10px;
+  }
+  .sidebar{
+    order:2;
+    width:100%;
+  }
+  .feed{
+    order:1;
+  }
+  .bottom-inner{
+    max-width:360px;
+  }
+  .post .media{
+    height:260px;
+  }
+}
+.icon{
+  font-size: 15px;
+}
+
+.bicon, .home{
+  font-size: 17px;
+
+}

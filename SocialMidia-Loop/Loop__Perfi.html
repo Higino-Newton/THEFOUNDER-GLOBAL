@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Perfil</title>
+    <link rel="stylesheet" href="css/style_nav.css" />
+    <link rel="shortcut icon" href="img/LoopLogo.png" type="image/x-icon" />
+  </head>
+  <body>
+<style>
+      /* Menu lateral inferior */
+.side-menu{
+  position:fixed;
+  bottom:60px;
+  right:405px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  display:none;
+  padding:10px;
+}
+
+.side-menu div{
+  padding:8px 15px;
+  cursor:pointer;
+}
+
+.side-menu div:hover{
+  background:#eee;
+}
+
+/* Ativar o Modo Dark */
+.dark{
+  --bg:#121212;
+  --card:#1e1e1e;
+  --text:#f7f7f7;
+}
+    </style>
+
+    <div class="topbar">
+      <div class="loop">
+        <div class="left">
+          <img
+            class="avatar"
+            src="img/Avatar.jpg"
+            alt="avatar"
+            onclick="window.location = 'Loop__Perfi.html'"
+          />
+        </div>
+        <div class="center"><div class="logo">Loop</div></div>
+        <div class="right">
+          <div
+            class="icon"
+            title="Mensagens"
+            onclick="window.location = 'Loop__Mensagen.html'"
+          >
+            ✉️
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div
+        style="
+          max-width: 980px;
+          margin: 18px auto;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        "
+      >
+        <img
+          src="img/Avatar.jpg"
+          alt="perfil"
+          style="
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+          "
+        />
+        <div
+          class="profile-info"
+          style="display: flex; flex-direction: column; gap: 6px"
+        >
+          <div style="font-size: 20px; font-weight: 800" class="name">
+            Jesus Salvador
+          </div>
+          <div style="color: var(--muted)">Luanda · Criador</div>
+          <div style="margin-top: 8px">
+            <button
+              class="follow-btn"
+              onclick="window.location = 'Loop__Criar.html'"
+            >
+              Criar Post
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Essa div é para completar as informaçoes do usuario ao criar um post-->
+      <div
+        id="profile-posts"
+        data-author="Higino Artes"
+        style="
+          max-width: 980px;
+          margin: 12px auto;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        "
+      ></div>
+    </main>
+      <!-- bottom nav, class dos botões de navegação -->
+    <nav class="bottom-nav">
+      <div class="bottom-inner">
+        <div class="bicon" onclick="window.location='Loop__Notificações.html'">
+          🔔
+        </div>
+        <div class="home" onclick="window.location='Loop__Feed.html'">🏠</div>
+
+        <div class="bicon" id="menuBtn">☰</div>
+      </div>
+              <div class="side-menu" id="sideMenu">
+  <div onclick="window.location='Loop__Perfi.html'">Perfil</div>
+  <div id="darkToggle">Modo Escuro</div>
+  <div>Configurações</div>
+  <div>Terminar Sessão</div>
+</div>
+    </nav>
+
+    <script src="js/script.js"></script>
+    <script>
+        // MENU CHANDUICHI
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+
+menuBtn.onclick = ()=>{
+  sideMenu.style.display = sideMenu.style.display === "block" ? "none" : "block";
+};
+
+// DARK MODE
+document.getElementById("darkToggle").onclick = ()=>{
+  document.body.classList.toggle("dark");
+};
+    </script>
+  </body>
+</html>
