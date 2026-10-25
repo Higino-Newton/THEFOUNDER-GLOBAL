@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo - Média</title>
+  </head>
+  <body>
+
+    <style>
+        body{
+              display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70vw;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 0 3px 3px #00000046;
+            padding: 20px;
+            width: 480px;
+            border-radius: 8px;
+        }
+        input{
+            width: 80%;
+            padding: 9px;
+            font-size: 17px;
+            border: none;
+            background-color: #cccccc83;
+            border-radius: 6px;
+            outline: none;
+        }
+        button{
+            border: none;
+            width: 40%;
+            padding: 15px;
+            background-color: rgb(8, 54, 184);
+            color: #fff;
+            border-radius: 6px;
+            margin: 20px;
+            cursor: pointer;
+            transition: .5s;
+            font-size: 17px;
+        }
+        button:hover{
+            background-color: rgb(1, 22, 78);
+        }
+        h3{
+            margin: 0;
+            padding: 0;
+        }
+        h3, h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            position: relative;
+            top: -30px;
+            
+        }
+        
+    
+    </style>
+    <div class="container">
+        <img src="./icons8_calculator_100px.png">
+<h1>Minha Média</h1>
+
+      <input
+        type="text"
+        placeholder="Inseri o nome do estudante"
+        id="nome"
+      /><br />
+      <input type="text" placeholder="Inseri primeira média" id="n1" required/><br />
+      <input type="text" placeholder="Inseri segunda média" id="n2"required/><br />
+      <input type="text" placeholder="Inseri terceira média" id="n3" required/><br />
+      <input type="text" placeholder="Inseri quarta média" id="n4" required/><br />
+      <input type="text" placeholder="Inseri quinta média" id="n5" /><br />
+      <input type="text" placeholder="Inseri sexta média" id="n6"/><br />
+      <input type="text" placeholder="Inseri setima média" id="n7" /><br />
+      <input type="text" placeholder="Inseri oitava média" id="n8"/><br />
+      <h3 id="outMedia"></h3>
+      <h3 id="outSituacao"></h3>
+      <button onclick="CalculoMedia()">Calcular Média</button>
+      <span style="color: #ccc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 13px;">Made by &copy;NewtonDevCode</span>
+    </div>
+ 
+    <script>
+      function CalculoMedia() {
+        let innome = document.getElementById("nome");
+        let innota1 = document.getElementById("n1");
+        let innota2 = document.getElementById("n2");
+        let innota3 = document.getElementById("n3");
+        let innota4 = document.getElementById("n4");
+        let innota5 = document.getElementById("n5");
+        let innota6 = document.getElementById("n6");
+        let innota7 = document.getElementById("n7");
+        let innota8 = document.getElementById("n8");
+        let situacao = document.getElementById("outSituacao");
+        let result = document.getElementById("outMedia");
+        let nome = innome.value;
+        let n1 = Number(innota1.value);
+        let n2 = Number(innota2.value);
+        let n3 = Number(innota3.value);
+        let n4 = Number(innota4.value);
+        let n5 = Number(innota5.value);
+        let n6 = Number(innota6.value);
+        let n7 = Number(innota7.value);
+        let n8 = Number(innota8.value);
+
+        let media = (n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8) / 8;
+        if (media >= 9) {
+          situacao.textContent = "Parabéns " + nome + "! você foi aprovado(a)";
+          situacao.style = "color: blue";
+          result.textContent="Sua média é: " + Math.round(media)
+        } else if (media >= 7) {
+          situacao.textContent = "Atenção " + nome + "você está no exame.";
+          situacao.style = "color: green";
+               result.textContent="Sua média é: " +Math.round(media)
+        } else {
+          situacao.textContent = "Ops! " + nome + "... você foi reprovado(a)";
+          situacao.style = "color: red";
+               result.textContent="Sua média é: " + Math.round(media)
+        }
+      }
+      
+    </script>
+  </body>
+</html>
